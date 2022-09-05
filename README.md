@@ -1,4 +1,7 @@
 # PixelHub
+
+![image](https://user-images.githubusercontent.com/96356684/188452001-77fb8fa9-4d53-4986-ada5-0ffe6c608ef2.png)
+
 ## _a place where you click on black boxes_
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
