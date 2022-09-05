@@ -13,7 +13,9 @@ it's easy, here are the steps:
 - go here https://behind24proxies.github.io/PixelHub/ , draw something , and copy the json output
 - run the python file , and let the script do the rest for you 
 
+## Requirements
 
+git installed and connected to github
 
 ## Demonstration
 
