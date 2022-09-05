@@ -1,6 +1,6 @@
 # PixelHub
 
-![image](https://user-images.githubusercontent.com/96356684/188452001-77fb8fa9-4d53-4986-ada5-0ffe6c608ef2.png)
+![image](https://user-images.githubusercontent.com/96356684/188452129-df3dcbe5-f56a-4a9c-ad04-9db53b0b37f6.png)
 
 ## _a place where you click on black boxes_
 
