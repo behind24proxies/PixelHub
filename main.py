@@ -7,7 +7,7 @@ def randomString(stringLength=6):
     lettersAndDigits = string.ascii_letters + string.digits
     return ''.join(random.choice(lettersAndDigits) for i in range(stringLength))
 jned = json.loads(input('enter the json string : '))
-remote_git = 'git remote add somename ' + input('\nenter the repo link (no worries I will add .git)') 
+remote_git = 'git remote add somename ' + input('\nenter the repo link (no worries I will add .git) :') 
 if not remote_git.endswith('.git'):
     remote_git = remote_git + '.git'
    
@@ -33,7 +33,7 @@ for k in jned.keys():
         builded_date = f'{k} 12:00:00'
         print(builded_date)
         for x in range(0,fries[jned[k]]):
-            with open('tesla.txt','a') as file:
+            with open('IceCream.txt','a') as file:
                 file.write('a')        
                 print(os.system("git add ."))
                 print('added')
