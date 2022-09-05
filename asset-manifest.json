@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PixelHub/static/css/main.e288fb95.css",
+    "main.js": "/PixelHub/static/js/main.2adb52e0.js",
+    "index.html": "/PixelHub/index.html",
+    "main.e288fb95.css.map": "/PixelHub/static/css/main.e288fb95.css.map",
+    "main.2adb52e0.js.map": "/PixelHub/static/js/main.2adb52e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e288fb95.css",
+    "static/js/main.2adb52e0.js"
+  ]
+}
