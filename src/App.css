@@ -1,38 +1,594 @@
-.App {
-  text-align: center;
-}
+/* hey you, if you are reading this then please close this file if you don't want to have nightmares for the next couple of years */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+    margin:0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .zero{
+    fill: #161a21;
+    background-color: #161a21;
+  
+  
+  }
+  .hidden{
+    /* height: 0px; */
+    position:absolute;
+    /* left: 300px; */
+    /* display: none; */
+    /* overflow: hidden;
+   */
+   left: -9999px;
+  
+  }
+  .one{
+    fill:#0d2a1e;
+    background-color: #0d2a1e;
+  
+  }
+  .two{
+    fill:#063d21;
+    background-color: #063d21;
+  
+  }
+  .three{
+    fill:#1e5d32;
+    background-color: #1e5d32;
+  
+  }
+  .four{
+    fill: #3cd152;
+    background-color: #3cd152;
+  
+  }
+  .colour{
+    height:100px;
+    width: 100px;
+    /* background-color: pink; */
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+  .bordered{
+    border: 5px solid #555;
+    scale : 1.1
+  }
+  .buttons{
+    display:flex;
+    margin-top:60px;
+  }
+  .button{
+    margin-right:10px;
+    transition: all 0.4s;
+  }
+  .days{
+    background-color:#0d1017;
+    display:flex;
+    flex-direction:column;
+    width: 900px;
+    align-items: center;
+  }
+  p{
+    color: #3cd152;
+  }
+  .hidden{
+    display:none;
+    height:0px;
+  }
+  .select-container:hover .option-container {
+    height: 240px;
+  }
+  .select-container:hover .select::after {
+    border: none;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+  }
+  .container2{
+    display:flex;
+    margin-top:100px;
+    flex-direction:column;
+    align-items: center;
+  }
+  .curryear{
+    background-color: #161a21;
+  margin-top: -40px;;
+  height:30px;
+  width: 90px;
+  border-radius:10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  color: #3cd152;
   }
-  to {
-    transform: rotate(360deg);
+  .main-container{
+    display:flex;
+    background-color:#0d1017;
+    width: 1200px;
+  
+    /* align-items: center; */
+  
+    flex-direction: column;
+    /* height: 1000px; */
+    height: 1000px;
+    /* justify-content: center; */
+    border-radius: 70px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%)
   }
-}
+  
+  
+  .years{
+    background-color:red;
+    height: 700px;
+    width : 300px;
+  }
+  .future{
+    background-color:pink;
+    height: 300px;
+    overflow:auto;
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
+  }
+  
+  
+  
+  .select-container {
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .select-container .select {
+    position: relative;
+    background: #0f0e11;
+    height: 60px;
+  }
+  
+  .select-container .select::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%) rotate(45deg);
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    cursor: pointer;
+    transition: border-color 0.4s;
+  }
+  
+  .select-container.active .select::after {
+    border: none;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+  }
+  .select-container .select input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+  }
+  .select-container .option-container {
+    position: relative;
+    background: #6e6477;
+    height: 0;
+    overflow-y: scroll;
+    transition: 0.4s;
+  }
+  
+  .select-container.active .option-container {
+    height: 240px;
+  }
+  
+  .select-container .option-container::-webkit-scrollbar {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    width: 10px;
+  }
+  
+  .select-container .option-container::-webkit-scrollbar-thumb {
+    background: #0f0e11;
+  }
+  
+  .select-container .option-container .option {
+    position: relative;
+    padding-left: 15px;
+    height: 60px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+  }
+  
+  .select-container .option-container .option.selected {
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
+  
+  .select-container .option-container .option:hover {
+    background: rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+  }
+  
+  .select-container .option-container .option label {
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+  }
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Courier New";
+  }
+  
+  body {
+      /* background: #2f363e; */
+      /* set background to shade between #161a21 and  #2f363e*/
+      background: linear-gradient(10deg, #161a21 0%, #2f363e 100%);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center
+  }
+  
+  .select-container {
+      position: relative;
+      margin: 0 auto;
+      width: 400px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .select-container .select {
+      position: relative;
+      background: #0f0e11;
+      height: 60px;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  .select-container .select::after {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%) rotate(45deg);
+      border-bottom: 2px solid white;
+      border-right: 2px solid white;
+      cursor: pointer;
+      transition: border-color 0.4s;
+  }
+  
+  .select-container.active .select::after {
+      border: none;
+      border-left: 2px solid white;
+      border-top: 2px solid white;
+  }
+  .select-container .select input {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 0 15px;
+      background: none;
+      outline: none;
+      border: none;
+      font-size: 1.4rem;
+      color: white;
+      cursor: pointer;
+  }
+  .select-container .option-container {
+      position: relative;
+      background: #6e6477;
+      height: 0;
+      overflow-y: scroll;
+      transition: 0.4s;
+  }
+  
+  .select-container.active .option-container {
+      height: 240px;
+  }
+  
+  .select-container .option-container::-webkit-scrollbar {
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+      width: 10px;
+  }
+  
+  .select-container .option-container::-webkit-scrollbar-thumb {
+      background: #0f0e11;
+  }
+  /* .select{
+    pointer-events: none;
+  
+  } */
+  .select-container .option-container .option {
+      position: relative;
+      padding-left: 15px;
+      height: 60px;
+      border-top: 1px solid rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: 0.2s;
+  }
+  
+  .select-container .option-container .option.selected {
+      background: rgba(0, 0, 0, 0.5);
+      pointer-events: none;
+  }
+  
+  .select-container .option-container .option:hover {
+      background: rgba(0, 0, 0, 0.2);
+      padding-left: 20px;
+  }
+  
+  .select-container .option-container .option label {
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+  }
+  
+  .payload{
+    background-color: #161a21;
+  color: #3cd152;
+    border-radius:10px;
+    width: 550px;
+    min-height:300px;
+    max-height: 301px;
+    margin-top:100px;
+    overflow: auto;
+  }
+  .copyit{
+    margin-top:20px;
+  }
+  .rick{
+    margin-top:30px;
+    background-color: #555;
+    color:#3cd152;
+    justify-content: center;
+    border-radius: 10px;
+    height:40px;
+    width:50px;
+    font-size:20px;
+    display:flex;
+    align-items: center;
+      /* remove pointer */
+    /* pointer: none; */
+    /* cursor:none; */
+    user-select: none;
+    -moz-user-select: none;
+   transition: all 0.4s;
+  }
+  .rick:hover{
+    scale:1.1;
+  }
+  .pero{
+    margin-top:30px;
+    background-color: #555;
+    color:#3cd152;
+    justify-content: center;
+    border-radius: 10px;
+    display:flex;
+    font-size:22px;
+    align-items: center;
+      /* remove pointer */
+    /* pointer: none; */
+    /* cursor:none; */
+    user-select: none;
+    -moz-user-select: none;
+   transition: all 0.4s;
+    height:44px;
+    width:110px;
+    background-color: #161a21;
+    /* disable history click */
+    text-decoration: none;
+  }
+  .changer1{
+    /* margin-top:30px; */
+    margin-left:20px;
+    background-color: #555;
+    color:#3cd152;
+    justify-content: center;
+    border-radius: 10px;
+    height:40px;
+    width:150px;
+    display:flex;
+    align-items: center;
+      /* remove pointer */
+    /* pointer: none; */
+    /* cursor:none; */
+    user-select: none;
+    -moz-user-select: none;
+   transition: all 0.2s;
+  }
+  .changer1:hover{
+  scale:1.1;
+  }
+  .copy:hover{
+    scale: 1.1;
+  }
+  .payload::-webkit-scrollbar {
+    width: 10px;
+  }
+  .rick{
+    height:40px;
+    width:100px;
+    background-color: #161a21;
+    /* disable history click */
+    text-decoration: none;
+  }
+  a{ 
+    text-decoration: none;
+    color: #3cd152;
+  }
+  .payload::-webkit-scrollbar-thumb {
+    
+    background: rgb(105, 103, 103);
+    border-radius: 20px;;
+  }
+  .payload::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .changer{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:50px;
+    /* height: 100px; */
+    /* width: 100%; */
+    margin-left: 900px;
+    /* background-color: #edeeff; */
+  }
+  .nice-select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #555;
+    border-radius: 14px;
+    border: solid 1px #1e5d32;
+    color: #3cd152;
+    /* make text 40px */
+    /* font-size: 50px; */
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    white-space: nowrap;
+    width: auto; }
+    .nice-select:hover {
+      border-color: #264608; }
+    .nice-select:active, .nice-select.open, .nice-select:focus {
+      border-color: #161a21; }
+    .nice-select:after {
+      border-bottom: 2px solid #999;
+      border-right: 2px solid #999;
+      content: '';
+      display: block;
+      height: 5px;
+      margin-top: -4px;
+      pointer-events: none;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      -webkit-transform-origin: 66% 66%;
+          -ms-transform-origin: 66% 66%;
+              transform-origin: 66% 66%;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+      width: 5px; }
+    .nice-select.open:after {
+      -webkit-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+              transform: rotate(-135deg); }
+    .nice-select.open .list {
+      opacity: 1;
+      pointer-events: auto;
+      -webkit-transform: scale(1) translateY(0);
+          -ms-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0); }
+    .nice-select.disabled {
+      border-color: #ededed;
+      color: #999;
+      pointer-events: none; }
+      .nice-select.disabled:after {
+        border-color: #cccccc; }
+    .nice-select.wide {
+      width: 100%; }
+      .nice-select.wide .list {
+        left: 0 !important;
+        right: 0 !important; }
+    .nice-select.right {
+      float: right; }
+      .nice-select.right .list {
+        left: auto;
+        right: 0; }
+    .nice-select.small {
+      font-size: 12px;
+      height: 36px;
+      line-height: 34px; }
+      .nice-select.small:after {
+        height: 4px;
+        width: 4px; }
+      .nice-select.small .option {
+        line-height: 34px;
+        min-height: 34px; }
+    .nice-select .list {
+      background-color: #161a21;
+      border-radius: 15px;
+      box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+      box-sizing: border-box;
+      margin-top: 10px;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      -webkit-transform-origin: 50% 0;
+          -ms-transform-origin: 50% 0;
+              transform-origin: 50% 0;
+      -webkit-transform: scale(0.75) translateY(-21px);
+          -ms-transform: scale(0.75) translateY(-21px);
+              transform: scale(0.75) translateY(-21px);
+      -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+      transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+      z-index: 9; }
+      .nice-select .list:hover .option:not(:hover) {
+        background-color: transparent !important; }
+    .nice-select .option {
+      cursor: pointer;
+      font-weight: 400;
+      line-height: 40px;
+      list-style: none;
+      min-height: 40px;
+      outline: none;
+      padding-left: 18px;
+      padding-right: 29px;
+      text-align: left;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; }
+      .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+        background-color: #555; }
+      .nice-select .option.selected {
+        font-weight: bold; }
+      .nice-select .option.disabled {
+        background-color: transparent;
+        color: #999;
+        cursor: default; }
+  
+  .no-csspointerevents .nice-select .list {
+    display: none; }
+  
+  .no-csspointerevents .nice-select.open .list {
+    display: block; }
+  
